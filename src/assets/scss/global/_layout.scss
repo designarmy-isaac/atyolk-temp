@@ -1,0 +1,121 @@
+/* ===================================
+====================================== LAYOUT HELPER CLASSES
+=================================== */
+
+@for $i from 1 through 10 { 
+  $h: percentage($i/10);
+  .h-#{$i}0 {
+    height: $h;
+  }
+}
+
+@for $i from 1 through 3 { 
+  .p-#{$i} {
+    padding: #{$i}rem;
+  }
+  .p-t-#{$i} {
+    padding-top: #{$i}rem;
+  }
+  .p-b-#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+  .p-r-#{$i} {
+    padding-right: #{$i}rem;
+  }
+  .p-l-#{$i} {
+    padding-left: #{$i}rem;
+  }
+}
+
+.img-container {
+  display: inline-block;
+  height: 100%;
+  position: static;
+}
+
+
+/* ===================================
+====================================== FULL-HEIGHT
+=================================== */
+
+html,
+body,
+section,
+header {
+  min-height: 100%;
+  width: 100%;
+}
+
+section,
+header {
+  position: absolute;
+}
+
+.section-content-container {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  background: $white;
+  border-bottom: 1px solid $black;
+}
+
+@for $i from 1 through 6 { // number of sections
+  $h: percentage($i/1);
+  #section-#{$i} {
+//    height: $h;
+    z-index: -#{$i};
+  }
+}
+
+.background-black {
+  background: $black;
+  color: $white;
+}
+
+/* ===================================
+====================================== COVER
+=================================== */
+
+.logo-row {
+}
+
+
+
+.logo {
+  height: 100%;
+//  backdrop-filter: url(commonfilters.svg#filter);
+//  backdrop-filter: invert(100%);
+}
+
+#cover {
+  height: 100%;
+}
+
+#cover-content-container {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-bottom-width: 0;
+  padding: 1rem;
+}
+
+
+/* ===================================
+====================================== ORBIT
+=================================== */
+
+.orbit-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.orbit-caption {
+  padding: 1rem;
+  background: none;
+  color: white;
+}
+
+.orbit-previous,
+.orbit-next {
+  height: 100%;
+  font-size: 1.5rem;
+}
