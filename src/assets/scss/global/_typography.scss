@@ -11,8 +11,11 @@
 }
 
 h1,
+.h1,
 h2,
-h3 {
+.h2,
+h3,
+.h3 {
   text-transform: uppercase;
 }
 
@@ -47,5 +50,37 @@ h2 {
 }
 
 h3 {
-  margin-top: 8rem;
+  margin-top: .5rem;
+}
+
+.round {
+  border-radius: 3rem;
+}
+
+/* ===================================
+====================================== COLOR AND STYLE
+=================================== */
+
+.background-black {
+  background: $black;
+  color: $white;
+}
+
+.background-white {
+  background: $white;
+  color: $black;
+}
+
+
+.horizontal-line {
+  display: block;
+  border-top: 1px solid $black;
+  width: 100%;
+  position: relative;
+  top: .5rem;
+  z-index: -1;
+}
+
+.button {
+  transition: all 0.25 ease-out;
 }

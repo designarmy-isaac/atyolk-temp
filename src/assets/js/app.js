@@ -14,38 +14,16 @@ require('foundation-sites');
 // the line below
 //import './lib/foundation-explicit-pieces';
 
-$(document).foundation();
 $(document).ready( fn );
 
 function fn() {
   
-  stickybits('.section-content-container');
+  $(document).foundation();
   
-  var $cover = $('#cover'),
-      $sections = $('section'),
-      $sectionContents = $('.section-content-container');
-  
-  function sectionHeights() {
-    var sumHeights = $cover.height() + 200,
-        i = 0;
-    $sectionContents.each(function() {
-      sumHeights += $(this).outerHeight();
-      console.log(i);
-//      console.log(sumHeights.toFixed(0));
-//      console.log($sections[i]);
-      $sections.eq(i).height(sumHeights);
-      i += 1;
-      sumHeights += 200;
-    });
-    
-  }
-  
-  sectionHeights();
-  $(window).resize( function() { sectionHeights(); });
-  
-//  var sumHeights = 0;
-//  $('section').each(function() {
-//    sumHeights += $(this).outerHeight();
-//  });
-//  $('body').height(sumHeights);
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-out',
+    delay: 100,
+    disable: 'mobile',
+  });
 }

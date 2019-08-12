@@ -9,7 +9,11 @@
   }
 }
 
-@for $i from 1 through 3 { 
+  .m-b-05 {
+    margin-bottom: 0.5rem;
+  }
+
+@for $i from 1 through 6 { 
   .p-#{$i} {
     padding: #{$i}rem;
   }
@@ -25,12 +29,9 @@
   .p-l-#{$i} {
     padding-left: #{$i}rem;
   }
-}
-
-.img-container {
-  display: inline-block;
-  height: 100%;
-  position: static;
+  .m-b-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
 }
 
 
@@ -39,65 +40,117 @@
 =================================== */
 
 html,
-body,
-section,
-header {
+body {
   min-height: 100%;
   width: 100%;
 }
 
-section,
-header {
-  position: absolute;
-}
+/* ===================================
+====================================== HEADER
+=================================== */
 
-.section-content-container {
-  padding-top: 6rem;
-  padding-bottom: 8rem;
-  background: $white;
-  border-bottom: 1px solid $black;
-}
-
-@for $i from 1 through 6 { // number of sections
-  $h: percentage($i/1);
-  #section-#{$i} {
-//    height: $h;
-    z-index: -#{$i};
-  }
-}
-
-.background-black {
-  background: $black;
-  color: $white;
+.bordered {
+  border: 1px solid $black;
 }
 
 /* ===================================
-====================================== COVER
+====================================== NAV
 =================================== */
 
-.logo-row {
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 1px solid $black;
+  border-right: 1px solid $black;
+  @include breakpoint(large) {
+    border-right-width: 0;
+  }
 }
 
+td {
+  position: relative;
+  vertical-align: top;
+  padding: .5rem;
+  transition: $button-transition;
+  
+  border: 1px solid $black;
+  border-bottom-width: 0;
+  
+  .button {
+    position: relative;
+    z-index: 1;
+    background: $white;
+    border: 1px solid $black;
+    color: $black;
+    &:hover {
+      background: $black;
+      border: 1px solid $white;
+      color: $white;
+    }
+  }
+}
 
+.nav-cell {
+  display: block;
+  width: 100%;
+  border-left-width: 0;
+  border-right-width: 0;
+  @include breakpoint(large) {
+    display: table-cell;
+    width: 31.333%;
+    border-left-width: 1px;
+    border-right-width: 1px;
+  }
+  &:hover {
+    color: $white;
+    background: $black;
+  }
+}
+
+.logo-cell {
+  width: 15%;
+  @include breakpoint(medium) {
+    width: 12%;
+  }
+  @include breakpoint(large) {
+    width: 6%;
+  }
+}
 
 .logo {
-  height: 100%;
-//  backdrop-filter: url(commonfilters.svg#filter);
-//  backdrop-filter: invert(100%);
+  margin: .5rem;
 }
 
-#cover {
-  height: 100%;
+a.nav-title {
+  &:hover {
+    color: $white;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
-
-#cover-content-container {
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  border-bottom-width: 0;
-  padding: 1rem;
+a.nav-title-downlink::after {
+  background-image: url('../img/ATYOLK-down_arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 2.6rem;
+  width: 2.6rem;
+  margin-left: .5rem;
+  opacity: 0;
+  transition: opacity .25s ease-out;
+  content: "";
 }
-
+a.nav-title-downlink:hover::after {
+  opacity: 1;
+}
 
 /* ===================================
 ====================================== ORBIT
@@ -112,10 +165,107 @@ header {
   padding: 1rem;
   background: none;
   color: white;
+  text-align: center;
 }
 
 .orbit-previous,
 .orbit-next {
-  height: 100%;
-  font-size: 1.5rem;
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  padding: .5rem;
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid $black;
+  background-color: $white;
+  transition: all 0.25s ease-out;
+  &:hover {
+    background-color: $black;
+  }
+}
+.orbit-previous {
+  background-image: url('../img/ATYOLK-left_arrow-black.png');
+  margin-left: 1rem;
+  &:hover {
+    background-image: url('../img/ATYOLK-left_arrow.png')
+  }
+}
+.orbit-next {
+  background-image: url('../img/ATYOLK-right_arrow-black.png');
+  margin-right: 1rem;
+  &:hover {
+    background-image: url('../img/ATYOLK-right_arrow.png')
+  }
+}
+
+
+/* ===================================
+====================================== FOOTER
+=================================== */
+
+footer a {
+  text-transform: none;
+}
+  
+footer label {
+  display: inline-block;
+  width: 80%;
+}
+
+input[type='email'] {
+  background: $black;
+  font-size: 2rem;
+  border-color: $white;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+  height: 3.75rem;
+  color: $white;
+  border-radius: 0;
+  &:active,
+  &:hover, 
+  &:focus {
+    background: $black;
+    outline: none;
+    box-shadow: none;
+    border-color: $white;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+  }
+}
+
+footer {
+  button[type='submit'] {
+    color: $white;
+    display: inline;
+    padding: .5rem;
+    position: relative;
+    left: -4rem;
+    height: 3rem;
+    width: 3rem;
+    background-image: url('../img/ATYOLK-right_arrow.png');
+    background-size: contain;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      opacity: .7;
+    }
+  }
+}
+
+footer h3,
+footer .h3 {
+  margin-top: 6rem;
+}
+
+.social-icon-link {
+  margin-right: 1rem;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.social-icon-img {
+  height: 56px;
+  width: 56px;
 }

@@ -65,7 +65,7 @@
 // 1. Global
 // ---------
 
-$global-font-size: 90%;
+$global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1;
 $foundation-palette: (
@@ -160,7 +160,7 @@ $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $black;
 $paragraph-lineheight: 1.6;
-$paragraph-margin-bottom: 2rem;
+$paragraph-margin-bottom: 1.25rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
 $code-font-family: $font-family-monospace;
@@ -280,7 +280,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // ----------
 
 $button-font-family: inherit;
-$button-padding: 0.85em 1em;
+$button-padding: 0.85em 1.5em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -525,7 +525,7 @@ $orbit-bullet-margin-top: 0.8rem;
 $orbit-bullet-margin-bottom: 0.8rem;
 $orbit-caption-background: rgba($black, 0.5);
 $orbit-caption-padding: 1rem;
-$orbit-control-background-hover: rgba($black, 0.1);
+$orbit-control-background-hover: rgba($black, 0);
 $orbit-control-padding: 1rem 1.2rem 1.1rem;
 $orbit-control-zindex: 10;
 
