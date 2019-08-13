@@ -7,10 +7,10 @@
   </div>
 </header>
 -->
-<nav class="grid-container p-t-1" data-aos="fade">
+<nav class="grid-container p-t-1" data-smooth-scroll data-aos="fade">
   <div class="grid-x grid-padding-x">
     <div class="cell small-12">
-      <table class="m-b-1" data-smooth-scroll data-options="animationDuration: 300; animationEasing: swing">
+      <table class="m-b-1" data-options="animationDuration: 300; animationEasing: swing">
         <tr>
           <td rowspan="2" class="logo-cell">
             <img class="logo" src="{{root}}/assets/img/ATYOLK-logo-vertical.svg" alt="AT YOLK">
@@ -62,12 +62,12 @@
     </div>
   </div>
 </section>
-<section class="grid-container" id="section-studios">
+<section class="grid-container" id="section-studios" data-smooth-scroll>
   <div class="grid-x grid-padding-x p-t-1 m-b-4">
-    <div class="cell small-12 large-4">
+    <div class="cell small-12 large-4 large-order-1">
       <h2 data-aos="fade">Studios</h2>
     </div>
-    <div class="cell small-12 large-8">
+    <div class="cell small-12 large-8 large-order-2">
       <p class="p-b-6" data-aos="fade">As long time members of the creative community, we have a unique understanding of what photo and production teams need to get the most work done — seamlessly and without stress. Our studios are flexible, with movable walls, and daylight that goes on forever. We also have a host of other amenities. An SEOed paragraph about our three studios and their full eastern and southern exposures, polished concrete floors, full kitchen, cyc wall, and other searchable things.
       Client Lounge,
       Preferred Vendors List,
@@ -80,14 +80,14 @@
       600 Amps 2 Phase Camlock,
       Loading Dock</p>
     </div>
-    <div id="section-studio-A" class="cell large-4">
+    <div id="section-studio-A" class="cell large-4 large-order-3">
       <h3 data-aos="fade">Studio A</h3>
       <p data-aos="fade">1,140 square foot daylight studio with full eastern and southern exposures, polished concrete floors, and full kitchen. Studio A can be combined with Studio B and/or Studio C.</p>
       <p data-aos="fade"><strong>Dimensions:</strong> 30W x 38L x 14H</p>
-      <button class="button hollow" data-aos="fade">Download Spec Sheet ↓</button>
-      <button class="button hollow" data-aos="fade">Contact Us ☎</button>
+      <a href="#pdf" button class="button hollow round small" data-aos="fade">Download Spec Sheet ↓</a>
+      <a href="#section-contact" class="button hollow round small" data-aos="fade">Contact Us</a>
     </div>
-    <div class="cell large-8 m-b-6" data-aos="fade">
+    <div class="cell large-8 m-b-6 large-order-4" data-aos="fade">
       <div class="orbit" role="region" aria-label="Pictures of Studio A" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; autoPlay: false;">
         <div class="orbit-wrapper">
           <ul class="orbit-container">
@@ -117,7 +117,14 @@
 -->
       </div>
     </div>
-    <div class="cell large-8 m-b-6">
+    <div id="section-studio-B" class="cell large-4 large-order-6">
+      <h3 data-aos="fade">Studio B</h3>
+      <p data-aos="fade">1,408 square foot daylight studio with southern exposure and polished concrete floors. Studio B can be combined with Studio A and/or Studio C.</p>
+      <p data-aos="fade"><strong>Dimensions:</strong> 44W x 32L x 24 H</p>
+      <a href="#pdf" button class="button hollow round small" data-aos="fade">Download Spec Sheet ↓</a>
+      <a href="#section-contact" class="button hollow round small" data-aos="fade">Contact Us</a>
+    </div>
+    <div class="cell large-8 m-b-6 large-order-5">
       <div class="orbit" role="region" aria-label="Pictures of Studio B" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; autoPlay: false;">
         <div class="orbit-wrapper">
           <ul class="orbit-container">
@@ -147,23 +154,16 @@
         </div>
       </div>
     </div>
-    <div id="section-studio-B" class="cell large-4">
-      <h3 data-aos="fade">Studio B</h3>
-      <p data-aos="fade">1,408 square foot daylight studio with southern exposure and polished concrete floors. Studio B can be combined with Studio A and/or Studio C.</p>
-      <p data-aos="fade"><strong>Dimensions:</strong> 44W x 32L x 24 H</p>
-      <button class="button hollow" data-aos="fade">Download Spec Sheet ↓</button>
-      <button class="button hollow" data-aos="fade">Contact Us ☎</button>
-    </div>
-    <div id="section-studio-C" class="cell large-4">
+    <div id="section-studio-C" class="cell large-4 large-order-7">
       <h3 data-aos="fade">Studio C</h3>
-      <p data-aos="fade">2,112 square foot daylight studio with polished concrete floors and kitchenette. Studio C can be combined with Studio A and/or Studio B.</p>
+      <p data-aos="fade">800 square foot daylight studio with polished concrete floors and kitchenette. Studio C can be combined with Studio A and/or Studio B.</p>
       <p data-aos="fade"><strong>Dimensions:</strong> 25W x 32L x 18H
         <br>20-foot grid (Not pre-lit)
         <br>Drive-thru bay with 11-foot clearance</p>
-      <button class="button hollow" data-aos="fade">Download Spec Sheet ↓</button>
-      <button class="button hollow" data-aos="fade">Contact Us ☎</button>   
+      <a href="#pdf" button class="button hollow round small" data-aos="fade">Download Spec Sheet ↓</a>
+      <a href="#section-contact" class="button hollow round small" data-aos="fade">Contact Us</a>  
     </div>
-    <div class=" cell large-8" data-aos="fade">
+    <div class=" cell large-8 large-order-8" data-aos="fade">
       <div class="orbit" role="region" aria-label="Pictures of Studio C" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; autoPlay: false;">
         <div class="orbit-wrapper">
           <ul class="orbit-container">
@@ -208,7 +208,10 @@
   </div>
 </section>
 <section class="grid-container" id="section-events">
-  <div class="grid-x grid-padding-x bordered p-t-1 m-b-6">
+  <div class="grid-x grid-padding-x m-b-6 p-b-6">
+    <div class="cell small-12 p-b-6 p-t-6">
+      <hr data-aos="fade">
+    </div>
     <div class="cell small-12 large-4">
       <h2 data-aos="fade">Events</h2>
       <p data-aos="fade">A vibrant, light filled space with tall ceilings and a full kitchen. AT YOLK can easily accommodate events of all sizes from intimate dinners, to fantasy weddings, and to corporate meetings. Holds up to 200. Art installation
@@ -226,7 +229,7 @@
       Luncheons
       </p>
       <p data-aos="fade">An SEOed paragraph about our three studios and their full eastern and southern exposures, polished concrete floors, full kitchen, cyc wall, and other searchable things.</p>
-      <button class="button hollow" data-aos="fade">Contact Us ☎</button>
+      <a href="#section-contact" class="button hollow round small" data-aos="fade">Contact Us</a>
     </div>
     <div class="cell small-12 large-8">
       <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; autoPlay: false;">
@@ -267,61 +270,85 @@
   </div>
 </section>
 
-<section class="fluid background-black p-t-6 p-b-6" id="section-about">
+<section class="fluid background-black p-b-6" id="section-about">
+  <div class="grid-x p-b-6 full">
+    <div class="cell small-3 large-2 instagram-photo-container">
+      <img src="{{root}}assets/img/ATYOLK-instagram_post-1.jpg" alt="Studio Space AT YOLK">
+      <a class="instagram-photo-link" href="https://instagram.com/atyolk">
+      </a>
+    </div>
+    <div class="cell small-3 large-2 instagram-photo-container">
+      <img src="{{root}}assets/img/ATYOLK-instagram_post-2.jpg" alt="Studio Space AT YOLK">
+      <a class="instagram-photo-link" href="https://instagram.com/atyolk">
+      </a>
+    </div>
+    <div class="cell small-3 large-2 instagram-photo-container">
+      <img src="{{root}}assets/img/ATYOLK-instagram_post-7.jpg" alt="Studio Space AT YOLK">
+      <a class="instagram-photo-link" href="https://instagram.com/atyolk">
+      </a>
+    </div>
+    <div class="cell small-3 large-2 show-for-large instagram-photo-container">
+      <img src="{{root}}assets/img/ATYOLK-instagram_post-4.jpg" alt="Studio Space AT YOLK">
+      <a class="instagram-photo-link" href="https://instagram.com/atyolk">
+      </a>
+    </div>
+    <div class="cell small-3 large-2 instagram-photo-container">
+      <img src="{{root}}assets/img/ATYOLK-instagram_post-5.jpg" alt="Studio Space AT YOLK">
+      <a class="instagram-photo-link" href="https://instagram.com/atyolk">
+      </a>
+    </div>
+    <div class="cell small-3 large-2 show-for-large instagram-photo-container">
+      <img src="{{root}}assets/img/ATYOLK-instagram_post-6.jpg" alt="Studio Space AT YOLK">
+      <a class="instagram-photo-link" href="https://instagram.com/atyolk">
+      </a>
+    </div>
+<!--
+    <div class="cell small-3 large-2">
+      <a class="instagram-link" href="https://instagram.com/atyolk">
+        <img src="{{root}}assets/img/ATYOLK-Icon_instagram.png" alt="Studio Space AT YOLK">
+        <br><img src="{{root}}assets/img/ATYOLK-right_arrow.png" alt="Studio Space AT YOLK">
+      </a>
+    </div>
+-->
+  </div>
   <div class="grid-container">
     <div class="grid-x grid-padding-x">
-      <div class="cell small-12 large-3">
-        <h2 data-aos="fade">Mission</h2>
+      <div class="cell small-12 large-5">
+        <h3 data-aos="fade">Mission</h3>
+        <p style="padding-top: 1.5rem" data-aos="fade">AT YOLK is a flexible multimedia space dedicated to supporting and nurturing the creative community in Washington, DC. Our mission is to provide a place for creators to meet, create, and share their vision and knowledge. Alive and dynamic, AT YOLK is a living environment, a continuous work in progress — ever evolving to meet the needs of a community of creators. We look to inspire, to connect creative minds, to mentor, to collaborate, and to teach those who dream of creating their own culture.</p>
       </div>
-      <div class="cell small-12 large-7 p-b-6">
-        <p data-aos="fade">AT YOLK is a flexible multimedia space dedicated to supporting and nurturing the creative community in Washington, DC. Our mission is to provide a place for creators to meet, create, and share their vision and knowledge. Alive and dynamic, AT YOLK is a living environment, a continuous work in progress — ever evolving to meet the needs of a community of creators. We look to inspire, to connect creative minds, to mentor, to collaborate, and to teach those who dream of creating their own culture.</p>
-      </div>
-      <div class="cell small-12 large-3">
-        <h2 data-aos="fade">Press</h2>
-      </div>
-      <div class="cell small-12 large-7 p-b-6">
-        <div class="grid-x grid-padding-x fluid">
-          <div class="cell small-12 large-6">
-<!--            <a href="https://www.forbes.com/sites/stephanieorma/2018/10/16/d-c-s-stunning-new-creative-space-marks-a-new-era-for-washington"><img src="{{root}}assets/img/ATYOLK-Forbes.jpg" alt="Forbes Logo" data-aos="fade"></a>-->
-            <p>
-              <small data-aos="fade">10.16.2018</small><br>
-              <a href="https://www.forbes.com/sites/stephanieorma/2018/10/16/d-c-s-stunning-new-creative-space-marks-a-new-era-for-washington" data-aos="fade">D.C.’s Stunning New Creative Space Marks A New Era For Washington</a><br>
-              <a href="https://www.forbes.com/sites/stephanieorma/2018/10/16/d-c-s-stunning-new-creative-space-marks-a-new-era-for-washington" data-aos="fade"><u>Forbes</u> &#10230;</a>
-            </p>
-          </div>
-          <div class="cell small-12 large-6">
-<!--            <img src="//placehold.it/400" data-aos="fade">-->
-            <p>
-              <small data-aos="fade">05.05.2018</small><br>
-              <a href="#" data-aos="fade">Design Army Gives Back to D.C. With a Creative Space Everyone Can Use</a><br>
-              <a href="#" data-aos="fade"><u>Adweek</u> &#10230;</a>
-            </p>
-          </div>
-          <div class="cell small-12 large-6">
-<!--            <a href="https://99u.adobe.com/articles/58771/design-armys-pum-lefebure-if-you-have-vision-a-great-portfolio-and-a-sledgehammer-dont-let-anything-stand-in-your-way"><img src="{{root}}assets/img/ATYOLK-99U.jpg" data-aos="fade" alt="Adobe 99U"></a>-->
-            <p>
-              <small data-aos="fade">03.05.2018</small><br>
-              <a href="https://99u.adobe.com/articles/58771/design-armys-pum-lefebure-if-you-have-vision-a-great-portfolio-and-a-sledgehammer-dont-let-anything-stand-in-your-way" data-aos="fade">If You Have Vision, a Great Portfolio, and a Sledgehammer, Don’t Let Anything Stand in Your Way</a><br>
-              <a href="https://99u.adobe.com/articles/58771/design-armys-pum-lefebure-if-you-have-vision-a-great-portfolio-and-a-sledgehammer-dont-let-anything-stand-in-your-way" data-aos="fade"><u>Adobe 99U</u> &#10230;</a>
-            </p>
-          </div>
-          <div class="cell small-12 large-6">
-<!--            <img src="//placehold.it/400" data-aos="fade">-->
-            <p>
-              <small data-aos="fade">03.11.2018</small><br>
-              <a href="#" data-aos="fade">Design Army Launches “The Genesis of Creation” Called “At Yolk”</a><br>
-              <a href="#" data-aos="fade"><u>Capitol Communicator</u> &#10230;</a>
-            </p>
-          </div>
-          <div class="cell small-12 large-6">
-<!--            <img src="//placehold.it/400" data-aos="fade">-->
-            <p>
-              <small data-aos="fade">10.16.2018</small><br>
-              <a href="#" data-aos="fade">D.C.’s Stunning New Creative Space Marks A New Era For Washington</a><br>
-              <a href="#" data-aos="fade"><u>Forbes</u> &#10230;</a>
-            </p>
-          </div>
-        </div>
+      <div class="cell small-12 large-5 large-offset-1">
+        <h3 data-aos="fade">Press</h3>
+        <!--            <a href="https://www.forbes.com/sites/stephanieorma/2018/10/16/d-c-s-stunning-new-creative-space-marks-a-new-era-for-washington"><img src="{{root}}assets/img/ATYOLK-Forbes.jpg" alt="Forbes Logo" data-aos="fade"></a>-->
+        <p>
+          <small data-aos="fade">10.16.2018</small><br>
+          <a href="https://www.forbes.com/sites/stephanieorma/2018/10/16/d-c-s-stunning-new-creative-space-marks-a-new-era-for-washington" data-aos="fade">D.C.’s Stunning New Creative Space Marks A New Era For Washington</a><br>
+          <a href="https://www.forbes.com/sites/stephanieorma/2018/10/16/d-c-s-stunning-new-creative-space-marks-a-new-era-for-washington" data-aos="fade"><u>Forbes</u> &#10230;</a>
+        </p>
+        <!--            <img src="//placehold.it/400" data-aos="fade">-->
+        <p>
+          <small data-aos="fade">05.05.2018</small><br>
+          <a href="#" data-aos="fade">Design Army Gives Back to D.C. With a Creative Space Everyone Can Use</a><br>
+          <a href="#" data-aos="fade"><u>Adweek</u> &#10230;</a>
+        </p>
+        <!--            <a href="https://99u.adobe.com/articles/58771/design-armys-pum-lefebure-if-you-have-vision-a-great-portfolio-and-a-sledgehammer-dont-let-anything-stand-in-your-way"><img src="{{root}}assets/img/ATYOLK-99U.jpg" data-aos="fade" alt="Adobe 99U"></a>-->
+        <p>
+          <small data-aos="fade">03.05.2018</small><br>
+          <a href="https://99u.adobe.com/articles/58771/design-armys-pum-lefebure-if-you-have-vision-a-great-portfolio-and-a-sledgehammer-dont-let-anything-stand-in-your-way" data-aos="fade">If You Have Vision, a Great Portfolio, and a Sledgehammer, Don’t Let Anything Stand in Your Way</a><br>
+          <a href="https://99u.adobe.com/articles/58771/design-armys-pum-lefebure-if-you-have-vision-a-great-portfolio-and-a-sledgehammer-dont-let-anything-stand-in-your-way" data-aos="fade"><u>Adobe 99U</u> &#10230;</a>
+        </p>
+        <!--            <img src="//placehold.it/400" data-aos="fade">-->
+        <p>
+          <small data-aos="fade">03.11.2018</small><br>
+          <a href="#" data-aos="fade">Design Army Launches “The Genesis of Creation” Called “At Yolk”</a><br>
+          <a href="#" data-aos="fade"><u>Capitol Communicator</u> &#10230;</a>
+        </p>
+        <!--            <img src="//placehold.it/400" data-aos="fade">-->
+        <p>
+          <small data-aos="fade">10.16.2018</small><br>
+          <a href="#" data-aos="fade">D.C.’s Stunning New Creative Space Marks A New Era For Washington</a><br>
+          <a href="#" data-aos="fade"><u>Forbes</u> &#10230;</a>
+        </p>
       </div>
     </div>
   </div>
@@ -330,7 +357,7 @@
   <div class="grid-container">
     <div class="grid-x grid-padding-x">
       <div class="cell small-12 large-order-1">
-        <hr>
+        <hr data-aos="fade">
       </div>
       <div class="cell small-12 large-6 large-order-5" id="section-address">
         <h3 data-aos="fade">Address</h3>
@@ -341,7 +368,7 @@
           </a>
         </p>
       </div>
-      <div class="cell small-12 large-5 large-offset-1 large-order-4" id="section-contact">
+      <div class="cell small-12 large-6 large-order-4" id="section-contact">
         <h2 class="h3" data-aos="fade">Contact Us</h2>
         <p class="h2" data-aos="fade">
           <a href="tel:+12027971018">202.797.1018</a>
@@ -357,8 +384,8 @@
           <button type="submit"></button>
         </p>
       </div>
-      <div class="cell small-12 large-5 large-offset-1 large-order-2">
-        <h3 data-aos="fade">Social</h3>
+      <div class="cell small-12 large-6 large-order-2">
+        <h3 data-aos="fade">Join Us</h3>
         <p class="h2" data-aos="fade">
           <a href="//instagram.com/atyolk" class="social-icon-link"><img class="social-icon-img" src="{{root}}assets/img/ATYOLK-Icon_instagram.png" alt="instagram"></a>
         <a href="//twitter.com/atyolk" class="social-icon-link"><img class="social-icon-img" src="{{root}}assets/img/ATYOLK-Icon_twitter.png" alt="twitter"></a>
@@ -366,7 +393,7 @@
         <a href="//pinterest.com/atyolk" class="social-icon-link"><img class="social-icon-img" src="{{root}}assets/img/ATYOLK-Icon_pinterest.png" alt="pinterest"></a>
         </p>
       </div>
-      <div class="small-12 large-11 large-offset-1 p-t-4 large-order-6">
+      <div class="small-12 p-t-4 large-order-6">
         <p><small>&copy; 2019 ATYOLK, All rights reserved.</small></p>
       </div>
     </div>

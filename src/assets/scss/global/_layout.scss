@@ -71,7 +71,7 @@ table {
 td {
   position: relative;
   vertical-align: top;
-  padding: .5rem;
+  padding: .2rem .6rem .25rem;
   transition: $button-transition;
   
   border: 1px solid $black;
@@ -119,7 +119,7 @@ td {
 }
 
 .logo {
-  margin: .5rem;
+  margin: .6rem;
 }
 
 a.nav-title {
@@ -171,10 +171,10 @@ a.nav-title-downlink:hover::after {
 .orbit-previous,
 .orbit-next {
   cursor: pointer;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   padding: .5rem;
-  background-size: 2rem;
+  background-size: 1.75rem;
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid $black;
@@ -203,6 +203,55 @@ a.nav-title-downlink:hover::after {
 /* ===================================
 ====================================== FOOTER
 =================================== */
+
+.instagram-link {
+  text-align: center;
+  display: inline-block;
+  img {
+    display: inline-block;
+    width: 20%;
+    margin: auto;
+    margin-top: 40%;
+  }
+}
+
+.instagram-photo-container {
+  position: relative;
+}
+
+.instagram-photo-link {
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+  color: $white;
+//  height: 100%;
+//  width: 100%;
+  &:after {
+    content: "@atyolk";
+    color: $white;
+    background-image: url('../img/ATYOLK-Icon_instagram.png');
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    padding-top: 2.5rem;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0;
+  }
+  &:hover {
+    background-color: rgba(0,0,0,0.3);
+    &:after {
+      opacity: 1;
+    }
+  }
+}
 
 footer a {
   text-transform: none;
@@ -266,6 +315,6 @@ footer .h3 {
 }
 
 .social-icon-img {
-  height: 56px;
-  width: 56px;
+  height: 48px;
+  width: 48px;
 }

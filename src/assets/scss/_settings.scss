@@ -173,7 +173,7 @@ $anchor-color-hover: scale-color($medium-gray, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
-$hr-border: 1px solid $medium-gray;
+$hr-border: 1px solid;
 $hr-margin: rem-calc(20) auto;
 $list-lineheight: $paragraph-lineheight;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -404,7 +404,7 @@ $dropdown-menu-item-background-active: transparent;
 // 19. Flexbox Utilities
 // ---------------------
 
-$flex-source-ordering-count: 6;
+$flex-source-ordering-count: 8;
 $flexbox-responsive-breakpoints: true;
 
 // 20. Forms
