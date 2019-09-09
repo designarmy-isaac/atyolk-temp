@@ -30,7 +30,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sass, revAll));
+ gulp.series(clean, gulp.parallel(pages, php, javascript, images, copy), sass, revAll));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -60,6 +60,12 @@ function pages() {
       helpers: 'src/helpers/'
     }))
     .pipe(gulp.dest(PATHS.dist));
+}
+
+// Copy php
+function php() {
+  return gulp.src('src/pages/**/*.php')
+  .pipe(gulp.dest(PATHS.dist));
 }
 
 // Load updated HTML templates and partials into Panini
@@ -108,7 +114,7 @@ let webpackConfig = {
     ]
   },
   devtool: !PRODUCTION && 'source-map'
-}
+};
 
 // Combine JavaScript into one file
 // In production, the file is minified
@@ -160,6 +166,7 @@ function reload(done) {
 function watch() {
   gulp.watch(PATHS.assets, copy);
   gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
+  gulp.watch('src/pages/**/*.php').on('all', gulp.series(php, browser.reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/data/**/*.{js,json,yml}').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/helpers/**/*.js').on('all', gulp.series(resetPages, pages, browser.reload));

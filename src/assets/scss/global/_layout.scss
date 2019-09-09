@@ -50,103 +50,44 @@ body {
 =================================== */
 
 .bordered {
-  border: 1px solid $black;
+//  border: 1px solid $black;
 }
 
 /* ===================================
 ====================================== NAV
 =================================== */
 
-table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 1px solid $black;
-  border-right: 1px solid $black;
-  @include breakpoint(large) {
-    border-right-width: 0;
-  }
-}
-
-td {
-  position: relative;
-  vertical-align: top;
-  padding: .2rem .6rem .25rem;
-  transition: $button-transition;
-  
-  border: 1px solid $black;
-  border-bottom-width: 0;
-  
-  .button {
-    position: relative;
-    z-index: 1;
-    background: $white;
-    border: 1px solid $black;
-    color: $black;
-    &:hover {
-      background: $black;
-      border: 1px solid $white;
-      color: $white;
-    }
-  }
-}
-
-.nav-cell {
-  display: block;
-  width: 100%;
-  border-left-width: 0;
-  border-right-width: 0;
-  @include breakpoint(large) {
-    display: table-cell;
-    width: 31.333%;
-    border-left-width: 1px;
-    border-right-width: 1px;
-  }
-  &:hover {
-    color: $white;
-    background: $black;
-  }
-}
-
-.logo-cell {
-  width: 15%;
-  @include breakpoint(medium) {
-    width: 12%;
-  }
-  @include breakpoint(large) {
-    width: 6%;
-  }
+.button.nav-button {
+  font-weight: normal;
+  background: none;
+  color: $black;
+  padding-left: .1rem;
 }
 
 .logo {
   margin: .6rem;
+  max-width: 3.5rem;
 }
 
-a.nav-title {
-  &:hover {
-    color: $white;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+a.nav-title-downlink:hover {
+  color: $black;
 }
+
 a.nav-title-downlink::after {
-  background-image: url('../img/ATYOLK-down_arrow.png');
+  background-image: url('../img/ATYOLK-down_arrow-black.png');
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
-  height: 2.6rem;
-  width: 2.6rem;
+  height: 2rem;
+  width: 2rem;
   margin-left: .5rem;
   opacity: 0;
   transition: opacity .25s ease-out;
   content: "";
+  @include breakpoint(medium) {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
 }
 a.nav-title-downlink:hover::after {
   opacity: 1;
@@ -178,7 +119,6 @@ a.nav-title-downlink:hover::after {
   background-size: 1.75rem;
   background-repeat: no-repeat;
   background-position: center;
-  border: 1px solid $black;
   background-color: $white;
   transition: all 0.25s ease-out;
   &:hover {
@@ -257,13 +197,9 @@ a.nav-title-downlink:hover::after {
 footer a {
   text-transform: none;
 }
-  
-footer label {
-  display: inline-block;
-  width: 80%;
-}
 
 input[type='email'] {
+  display: inline-block;
   background: $black;
   font-size: 2rem;
   border-color: $white;
@@ -272,6 +208,7 @@ input[type='email'] {
   height: 3.75rem;
   color: $white;
   border-radius: 0;
+  width: 85%;
   &:active,
   &:hover, 
   &:focus {
@@ -301,6 +238,43 @@ footer {
       opacity: .7;
     }
   }
+}
+
+.sign-up {
+  .success-message,
+  .error-message {
+    display: none;
+    color: $white !important;
+    &.show {
+      display: block;
+    }
+  }
+
+  #subscribe_email-error {
+    color: $white !important;
+    position: absolute;
+  }
+}
+
+.form-controls.done {
+  display: none;
+}
+
+.form-control {
+  -webkit-backface-visibility: hidden;
+}
+
+::-webkit-input-placeholder {
+  color: $white;
+}
+::-moz-placeholder {
+  color: $white;
+}
+:-ms-input-placeholder {
+  color: $white;
+}
+:-moz-placeholder {
+  color: $white;
 }
 
 footer h3,
